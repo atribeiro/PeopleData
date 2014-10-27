@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmplSampleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EmplSampleModelStoreContainer">
+    <EntitySet Name="EmployeeDetails" EntityType="EmplSampleModel.Store.EmployeeDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonDetails" EntityType="EmplSampleModel.Store.PersonDetails" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="EmployeeDetails">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nchar" MaxLength="20" />
+    <Property Name="Surname" Type="nchar" MaxLength="20" />
+    <Property Name="Address" Type="ntext" />
+    <Property Name="Phone" Type="numeric" />
+  </EntityType>
+  <EntityType Name="PersonDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Country" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contact" Type="float" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+</Schema>

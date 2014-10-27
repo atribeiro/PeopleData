@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmplSampleModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EmplSampleEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="EmployeeDetails" EntityType="EmplSampleModel.EmployeeDetail" />
+    <EntitySet Name="PersonDetails" EntityType="EmplSampleModel.PersonDetail" />
+  </EntityContainer>
+  <EntityType Name="EmployeeDetail">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="Surname" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="PersonDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Contact" Type="Double" />
+    <Property Name="Email" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>
